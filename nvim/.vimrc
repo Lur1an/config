@@ -19,8 +19,8 @@ nnoremap N Nzzzv
 nnoremap J mzJ'z
 
 
-"vmap J :m'>+1<CR>gv=gv
-"vmap K :m'<-2<CR>gv=gv
+vmap J :m'>+1<CR>gv=gv
+vmap K :m'<-2<CR>gv=gv
 
 
 
