@@ -16,6 +16,7 @@ Ideavim Remaps:
 	space+l move to right split
 	space+h move to left split
 	space+s open switcher
+	space+b toggle breakpoint
 	visual mode J MOVE SELECTION DOWN
 	visual mode K MOVE SELECTION UP
 

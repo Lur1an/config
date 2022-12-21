@@ -8,20 +8,13 @@ nmap <leader>h <C-w>h
 nmap <leader>d <Action>(Debug)
 nmap <leader>D <Action>(ChooseDebugConfiguration)
 nmap <leader>b <Action>(ToggleLineBreakpoint)
-
+nmap q :tabclose<CR>
 vmap J <Action>(MoveLineDown)
 vmap K <Action>(MoveLineUp)
 " Don't use Ex mode, use Q for formatting.
-map Q g
 
 
 "" -- Map IDE actions to IdeaVim -- https://jb.gg/abva4t
 "" Map \r to the Reformat Code action
 "map \r <Action>(ReformatCode)
 
-"" Map <leader>d to start debug
-"map <leader>d <Action>(Debug)
-
-"" Map \b to toggle the breakpoint on the current line
-"map \b <Action>(ToggleLineBreakpoint)
-" Find more examples here: https://jb.gg/share-ideavimrcset clipboard+=ideaputset clipboard+=ideaputset ideajoin
