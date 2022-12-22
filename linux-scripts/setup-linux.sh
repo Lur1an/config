@@ -25,3 +25,5 @@ sudo apt install neovim
 sudo apt-get install zsh -y
 sudo chsh -s /usr/bin/zsh
 sh -c "$(wget -O- https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+git clone --depth 1 https://github.com/wbthomason/packer.nvim\
+ ~/.local/share/nvim/site/pack/packer/start/packer.nvim
