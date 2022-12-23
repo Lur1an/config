@@ -1,28 +1,43 @@
 Intellij(Lurian Keymap, based on VSCode Keymap):
-	CTRL+SHIFT+I = Reformat Code
+    CTRL+K, CTRL+E = Show current file in project explorer
+    CTRL+K, CTRL+T = Change Theme
 	CTRL+SHIFT+L = Select all occurrences of word
-	CTRL+SHIFT+R = Open Refactor Menu
+	CTRL+R = Open Refactor Menu
 	CTRL+SHIFT+G = Open Git Menu
-	CTRL+P = Open File
+	CTRL+P = Search for file
+    CTRL+E = Open recent files window
+    CTRL+' = Open terminal
+    CTRL+, = Open settings  
 	CTRL+SHIFT+P = Run Command
-	CTRL+SHIFT+A = Searc All
+	CTRL+A = Search All
 	CTRL+SHIFT+F = Search in Scope
 	CTRL+SHIFT+H = Replace in Scope
-	CTRL+SHIFT+G = Generate
+    CTRL+K, CTRL+C = open commit
+	CTRL+G = Generate
 	ALT+L = Split and move Right
+    SHIFT+ENTER(In search context) = open file in right split
 Ideavim Remaps:
 	space+d run debug
+    gi - Go to Implementation (Custom & Language Dependant)
 	space+d choose and run debug
-	space+l move to right split
-	space+h move to left split
+	<C-l> move one tab to the right 
+	<C-h> move one tab to the left 
 	space+s open switcher
 	space+b toggle breakpoint
+    space+f format code
 	visual mode J MOVE SELECTION DOWN
 	visual mode K MOVE SELECTION UP
+    q to quit current editor tab
 
+Vim Remaps:
+    <C-s> writes current file (save)
+    q close current tab
+    <C-h> Harpoon Quick File 1
+    <C-j> Harpoon Quick File 2
+    <C-k> Harpoon Quick File 3
+    <C-l> Harpoon Quick File 4
 
-
-Vim:
+Vim useful Documentation:
 /<word_to_change>[ENTER]cgn<replacement> (then use n to move to next match and . to repeat change)
 CTRL+V to enter Visual Block, Shift+I to go into Block insert
 i - insert mode on cursor
@@ -34,19 +49,24 @@ O - insert mode create line above
 x - delete char 
 r - replace char
 R - insert-replace mode
-
+>> - indent right (works in visual mode)
+<< - indent left (works in visual mode) 
 * - go to next occurrence of current word (works with n and N iteration)
 # - go to previous occurence of current word (works with n and N iteration)
 
 gd - Go to Definition
 gn - Select next search result
-gi - Go to Implementation (Custom & Language Dependant)
 g_ - Go to last char of line
 gg - Go to start of file
+gv - Go to Visual mode and select previous selection
 G - Go to end of file
 gt - go to next tab
 gT - go to previous tab
-SHIFT-J - Join line below with current
+
+J - Join line below with current
+<C-w>c Close tab
+<C-w>s Split Horizontal 
+<C-w>v Split Vertical
 y<motion> - Yank | Y - Yank from cursor to end | yy - yank entire line
 d<motion> - Delete | D - Delete from cursor to end | yy - Delete entire linee
 c<motion> - Change

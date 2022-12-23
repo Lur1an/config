@@ -17,6 +17,7 @@ nnoremap <C-d> <C-d>zz
 nnoremap <C-u> <C-u>zz
 nnoremap n nzzzv
 nnoremap N Nzzzv
+map <C-s> :w<CR>
 nnoremap J mzJ'z
 "nmap <leader>pv :Ex<CR>
 
