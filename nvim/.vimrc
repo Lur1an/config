@@ -24,9 +24,10 @@ nnoremap J mzJ'z
 vmap J :m'>+1<CR>gv=gv
 vmap K :m'<-2<CR>gv=gv
 
-
+" Mappings/Settings for NeoVim only
 if has('nvim')
         nnoremap <leader>pv :Ex<CR>
+        nnoremap q <C-w>c
 end
 
 

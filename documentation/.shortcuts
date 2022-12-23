@@ -5,7 +5,7 @@ Intellij(Lurian Keymap, based on VSCode Keymap):
 	CTRL+R = Open Refactor Menu
 	CTRL+SHIFT+G = Open Git Menu
 	CTRL+P = Search for file
-    CTRL+E = Open recent files window
+    CTRL+E = Open Switcher Window
     CTRL+' = Open terminal
     CTRL+, = Open settings  
 	CTRL+SHIFT+P = Run Command
@@ -14,15 +14,15 @@ Intellij(Lurian Keymap, based on VSCode Keymap):
 	CTRL+SHIFT+H = Replace in Scope
     CTRL+K, CTRL+C = open commit
 	CTRL+G = Generate
-	ALT+L = Split and move Right
     SHIFT+ENTER(In search context) = open file in right split
+
 Ideavim Remaps:
 	space+d run debug
     gi - Go to Implementation (Custom & Language Dependant)
 	space+d choose and run debug
 	<C-l> move one tab to the right 
 	<C-h> move one tab to the left 
-	space+s open switcher
+	space+s Open recent tabs switcher window
 	space+b toggle breakpoint
     space+f format code
 	visual mode J MOVE SELECTION DOWN
