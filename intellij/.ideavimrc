@@ -1,7 +1,7 @@
 "" Source your .vimrc
 source ~/.config/nvim/.vimrc
 nmap gi :action GotoImplementation<CR>
-
+set ideajoin
 nmap <leader>s <Action>(Switcher)
 nmap <leader>d <Action>(ChooseDebugConfiguration)
 nmap <leader>f <Action>(ReformatCode)
