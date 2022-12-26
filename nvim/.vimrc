@@ -20,9 +20,12 @@ nnoremap N Nzzzv
 map <C-s> :w<CR>
 nnoremap J mzJ'z
 "nmap <leader>pv :Ex<CR>
-
+nnoremap <C-c> <Esc>
 vmap J :m'>+1<CR>gv=gv
 vmap K :m'<-2<CR>gv=gv
+" quickfix
+nnoremap <leader>k :lnext<CR>zz
+nnoremap <leader>j :lprev<CR>zz
 
 " Mappings/Settings for NeoVim only
 if has('nvim')

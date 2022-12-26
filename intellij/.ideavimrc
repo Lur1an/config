@@ -1,17 +1,23 @@
 "" Source your .vimrc
 source ~/.config/nvim/.vimrc
-nmap gi :action GotoImplementation<CR>
+"" Editing
 set ideajoin
-nmap <leader>s <Action>(Switcher)
-nmap <leader>d <Action>(ChooseDebugConfiguration)
-nmap <leader>f <Action>(ReformatCode)
-map <leader>x <Action>(EvaluateExpression)
-nmap gh <Action>(ShowErrorDescription)
-nmap <leader>r <Action>(DebugClass)
-nmap <leader>b <Action>(ToggleLineBreakpoint)
-nmap q <Action>(CloseEditor)
 vmap J <Action>(MoveLineDown)
 vmap K <Action>(MoveLineUp)
+"" IDE Remaps
+nmap <leader>gc <Action>(Generate)
+nmap <leader>s <Action>(Switcher)
+nmap <leader>f <Action>(ReformatCode)
+map <leader>x <Action>(EvaluateExpression)
+nmap <leader>b <Action>(ToggleLineBreakpoint)
+nmap <leader>ca <Action>(ShowIntentionActions)
+nmap <leader>rf <Action>(Refactorings.QuickListPopupAction)
+"" Code Navigation
+nmap ]d <Action>(GotoNextError)
+nmap [d <Action>(GotoPreviousError)
+nmap gh <Action>(ShowErrorDescription)
+nmap q <Action>(CloseEditor)
+nmap gi <Action>(GotoImplementation)
 " Don't use Ex mode, use Q for formatting.
 
 

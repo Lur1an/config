@@ -1,10 +1,9 @@
 Intellij(Lurian Keymap, based on VSCode Keymap):
+    CTRL+H|J|K|L = Navigate LEFT|DOWN|UP|RIGHT whilst inside menu
 	CTRL+K, CTRL+E = Show current file in project explorer
 	CTRL+K, CTRL+T = Change Theme
-	CTRL+SHIFT+L = Select all occurrences of word
-	CTRL+SHIFT+R = Open Refactor Menu
-	CTRL+SHIFT+G = Open Code-Generation Menu
-	CTRL+. = Open quick fix	
+    CTRL+SHIFT+D = Debug current context
+	CTRL+SHIFT+R = Run current context
 	CTRL+P = Search for file
 	CTRL+E = Open Recent file window (CTRL+E again to trigger only changed files)
 	CTRL+SHIFT+E = Open explorer window
@@ -22,9 +21,9 @@ Intellij(Lurian Keymap, based on VSCode Keymap):
 	SHIFT+ENTER(In search context) = open file in right split
 
 Ideavim Remaps:
-	<leader>d - choose debug configuration
-	<leader>r - Debug Current Class/Function (execute Main/Test)	
 	<leader>b - toggle breakpoint
+    <leader>rf - Refactor
+    <leader>gc - Generate code
 	gi - Go to Implementation (Custom & Language Dependant)
 	<leader>d - choose and run debug
 	<leader>s - Open recent tabs switcher window
@@ -38,6 +37,7 @@ Ideavim Remaps:
 Vim Remaps:
 	(NORMAL mode)<C-s> writes current file (save)
 	(NORMAL mode)q close current tab
+Neovim Remaps:
 	(NORMAL mode)<C-h> Harpoon Quick File 1
 	(NORMAL mode)<C-j> Harpoon Quick File 2
 	(NORMAL mode)<C-k> Harpoon Quick File 3

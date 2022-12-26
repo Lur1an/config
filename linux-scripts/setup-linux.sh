@@ -27,3 +27,5 @@ sudo chsh -s /usr/bin/zsh
 sh -c "$(wget -O- https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 git clone --depth 1 https://github.com/wbthomason/packer.nvim\
  ~/.local/share/nvim/site/pack/packer/start/packer.nvim
+curl -L https://bit.ly/n-install | bash
+ln -s $(which fdfind) ~/.local/bin/fd
