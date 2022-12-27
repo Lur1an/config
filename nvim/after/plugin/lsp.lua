@@ -20,6 +20,7 @@ lsp.on_attach(function(client, buf)
     vim.keymap.set("n", "K", function() vim.lsp.buf.hover() end, opts)
     vim.keymap.set("n", "<leader>ca", function() vim.lsp.buf.code_action() end, opts)
     vim.keymap.set('n', '<leader>k', vim.lsp.buf.signature_help, opts)
+    vim.keymap.set("n", '<leader>f', function() vim.lsp.buf.format { async = true } end, opts)
     end
 )
 lsp.setup()
