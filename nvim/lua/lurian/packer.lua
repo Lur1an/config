@@ -38,8 +38,9 @@ return require('packer').startup(function(use)
     }
     use 'nvim-lualine/lualine.nvim'
     use 'folke/tokyonight.nvim'
-    use 'simrat39/rust-tools.nvim'
     use 'Mofiqul/vscode.nvim'
+    use { "rcarriga/nvim-dap-ui", requires = { "mfussenegger/nvim-dap" } }
+    use "nvim-lua/plenary.nvim"
 end
 
 )

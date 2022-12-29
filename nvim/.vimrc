@@ -31,7 +31,6 @@ nnoremap <leader>j :lprev<CR>zz
 if has('nvim')
         nnoremap <leader>pv :Ex<CR>
         set foldenable
-        set foldmethod=manual
         nnoremap q <C-w>c
         packadd! doki-theme
         syntax enable
