@@ -32,3 +32,4 @@ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 wget https://download.jetbrains.com/toolbox/jetbrains-toolbox-1.27.2.13801.tar.gz
 tar -xvf jetbrains-toolbox-1.27.2.13801.tar.gz
 mv jetbrains-toolbox-1.27.2.13801/jetbrains-toolbox ~/Software
+sudo apt install tmux

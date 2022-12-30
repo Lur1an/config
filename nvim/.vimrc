@@ -30,8 +30,8 @@ nnoremap <leader>j :lprev<CR>zz
 " Mappings/Settings for NeoVim only
 if has('nvim')
         nnoremap <leader>pv :Ex<CR>
-        set foldenable
         nnoremap q <C-w>c
+        set nofoldenable
         packadd! doki-theme
         syntax enable
 end
