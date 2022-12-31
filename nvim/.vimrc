@@ -31,7 +31,9 @@ nnoremap <leader>j :lprev<CR>zz
 if has('nvim')
         nnoremap <leader>pv :Ex<CR>
         nnoremap q <C-w>c
+        set signcolumn=no
         set nofoldenable
+        set foldmethod=indent
         packadd! doki-theme
         syntax enable
 end

@@ -199,6 +199,11 @@ _G.packer_plugins = {
     path = "/home/lurian/.local/share/nvim/site/pack/packer/start/vim-fugitive",
     url = "https://github.com/tpope/vim-fugitive"
   },
+  ["vim-polyglot"] = {
+    loaded = true,
+    path = "/home/lurian/.local/share/nvim/site/pack/packer/start/vim-polyglot",
+    url = "https://github.com/sheerun/vim-polyglot"
+  },
   ["vim-rhubarb"] = {
     loaded = true,
     path = "/home/lurian/.local/share/nvim/site/pack/packer/start/vim-rhubarb",
