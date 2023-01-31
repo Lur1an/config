@@ -1,6 +1,7 @@
+gsettings set org.freedesktop.ibus.panel.emoji hotkey "[]"
 sudo apt update && sudo apt upgrade -y
-mkdir Software
-cd Downloads
+mkdir ~/Software
+cd ~/Downloads
 flatpak install org.telegram.desktop
 flatpak install com.spotify.Client
 flatpak install org.remmina.Remmina
