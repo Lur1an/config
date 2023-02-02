@@ -1,29 +1,24 @@
 gsettings set org.freedesktop.ibus.panel.emoji hotkey "[]"
+sudo add-apt-repository ppa:neovim-ppa/unstable
 sudo apt update && sudo apt upgrade -y
 mkdir ~/Software
-cd ~/Downloads
+flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 flatpak install org.telegram.desktop
 flatpak install com.spotify.Client
 flatpak install org.remmina.Remmina
 
-wget https://dl.discordapp.net/apps/linux/0.0.21/discord-0.0.21.deb
-sudo apt install ./discord-0.0.21.deb
+mkdir ~/.fonts
+cp ../fonts/'comic code'/'Comic Code Ligatures'/* ~/.fonts
 # Nord software
 sudo apt install snapd
 sudo snap install nordpass
-wget https://downloads.nordcdn.com/apps/linux/install.sh
-chmod +x install.sh
-sudo ./install.sh
-rm install.sh
 # Neovim
 sudo apt install neovim
-# zsh and ohmyzsh
-sudo apt-get install zsh -y
-sudo chsh -s /usr/bin/zsh
-sh -c "$(wget -O- https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 # Install packer
 git clone --depth 1 https://github.com/wbthomason/packer.nvim\
  ~/.local/share/nvim/site/pack/packer/start/packer.nvim
+mkdir ~/.local/share/nvim/site/pack/themes/start
+git clone https://github.com/doki-theme/doki-theme-vim.git ~/.local/share/nvim/site/pack/themes/start/doki-theme
 curl -L https://bit.ly/n-install | bash
 # Remap fdfind to fd
 ln -s $(which fdfind) ~/.local/bin/fd
