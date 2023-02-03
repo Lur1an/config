@@ -6,10 +6,11 @@ vmap J <Action>(MoveLineDown)
 vmap K <Action>(MoveLineUp)
 "" IDE Remaps
 nmap <leader>gc <Action>(Generate)
-nmap <leader>s <Action>(Switcher)
 nmap <leader>f <Action>(ReformatCode)
 map <leader>x <Action>(EvaluateExpression)
 nmap <leader>b <Action>(ToggleLineBreakpoint)
+vmap <C-r> <Action>(RenameElement)
+nmap <C-r> <Action>(RenameElement)
 nmap <leader>ca <Action>(ShowIntentionActions)
 nmap <leader>rf <Action>(Refactorings.QuickListPopupAction)
 "" Code Navigation
@@ -19,7 +20,9 @@ nmap gh <Action>(ShowErrorDescription)
 nmap q <Action>(CloseEditor)
 nmap gi <Action>(GotoImplementation)
 " Don't use Ex mode, use Q for formatting.
-
+map mc <A-n>
+map mx <A-x>
+map mp <A-p>
 
 "" -- Map IDE actions to IdeaVim -- https://jb.gg/abva4t
 "" Map \r to the Reformat Code action
