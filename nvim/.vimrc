@@ -4,7 +4,6 @@ set relativenumber
 set rnu
 set scrolloff=8
 set incsearch
-set clipboard=unnamedplus
 set smartindent
 set wrap! 
 set expandtab 
@@ -26,6 +25,22 @@ vmap K :m'<-2<CR>gv=gv
 " quickfix
 nnoremap <leader>k :lnext<CR>zz
 nnoremap <leader>j :lprev<CR>zz
+vnoremap " c""<C-c>P
+vnoremap ( c()<C-c>P
+vnoremap { c{}<C-c>P
+vnoremap [ c[]<C-c>P
+vnoremap ' c''<C-c>P
+vnoremap ` c``<C-c>P
+vnoremap < c<><C-c>P
+
+" Register remaps
+vnoremap <leader>p "_dP
+nnoremap <leader>y "+y
+vnoremap <leader>y "+y
+nnoremap <leader>Y "+Y
+vnoremap <leader>Y "+Y
+nnoremap <leader>d "_d
+vnoremap <leader>d "_d
 
 " Mappings/Settings for NeoVim only
 if has('nvim')
