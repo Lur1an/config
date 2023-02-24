@@ -1,4 +1,5 @@
 gsettings set org.freedesktop.ibus.panel.emoji hotkey "[]"
+gsettings set org.gnome.desktop.interface enable-animations false
 sudo add-apt-repository ppa:neovim-ppa/unstable
 sudo apt update && sudo apt upgrade -y
 mkdir ~/Software
@@ -19,7 +20,6 @@ git clone --depth 1 https://github.com/wbthomason/packer.nvim\
  ~/.local/share/nvim/site/pack/packer/start/packer.nvim
 mkdir ~/.local/share/nvim/site/pack/themes/start
 git clone https://github.com/doki-theme/doki-theme-vim.git ~/.local/share/nvim/site/pack/themes/start/doki-theme
-curl -L https://bit.ly/n-install | bash
 # Remap fdfind to fd
 ln -s $(which fdfind) ~/.local/bin/fd
 # Rust
