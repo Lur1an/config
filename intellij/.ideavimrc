@@ -2,17 +2,20 @@
 source ~/.config/nvim/.vimrc
 "" Editing
 set ideajoin
+set clipboard=unnamedplus
 vmap J <Action>(MoveLineDown)
 vmap K <Action>(MoveLineUp)
 "" IDE Remaps
 nmap <leader>gc <Action>(Generate)
 nmap <leader>f <Action>(ReformatCode)
+nmap <leader>s <Action>(Switcher)
 map <leader>x <Action>(EvaluateExpression)
 nmap <leader>b <Action>(ToggleLineBreakpoint)
 vmap <C-r> <Action>(RenameElement)
 nmap <C-r> <Action>(RenameElement)
 nmap <leader>ca <Action>(ShowIntentionActions)
 nmap <leader>rf <Action>(Refactorings.QuickListPopupAction)
+vmap <leader>rf <Action>(Refactorings.QuickListPopupAction)
 "" Code Navigation
 nmap ]d <Action>(GotoNextError)
 nmap [d <Action>(GotoPreviousError)

@@ -31,7 +31,6 @@ vnoremap { c{}<C-c>P
 vnoremap [ c[]<C-c>P
 vnoremap ' c''<C-c>P
 vnoremap ` c``<C-c>P
-vnoremap < c<><C-c>P
 
 " Register remaps
 vnoremap <leader>p "_dP
@@ -45,6 +44,9 @@ vnoremap <leader>d "_d
 " Mappings/Settings for NeoVim only
 if has('nvim')
         nnoremap <leader>pv :Ex<CR>
+        "inoremap [ []<Left>
+        "inoremap { {}<Left>       
+        "inoremap ( ()<Left>
         nnoremap q <C-w>c
         set signcolumn=no
         set nofoldenable
