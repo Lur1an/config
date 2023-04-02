@@ -14,6 +14,7 @@ return require('packer').startup(function(use)
     -- Git stuff
     use('tpope/vim-fugitive')
     use('tpope/vim-rhubarb')
+    use 'martinsione/darkplus.nvim'
 
     use {
         'VonHeikemen/lsp-zero.nvim',
@@ -41,13 +42,6 @@ return require('packer').startup(function(use)
     use 'folke/tokyonight.nvim'
     use 'Mofiqul/vscode.nvim'
     use { "rcarriga/nvim-dap-ui", requires = { "mfussenegger/nvim-dap" } }
-    use {
-        'simrat39/rust-tools.nvim',
-        requires = {
-            { use "nvim-lua/plenary.nvim" },
-            { use 'mfussenegger/nvim-dap' }
-        }
-    }
 end
 
 )

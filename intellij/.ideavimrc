@@ -11,8 +11,6 @@ nmap <leader>f <Action>(ReformatCode)
 nmap <leader>s <Action>(Switcher)
 map <leader>x <Action>(EvaluateExpression)
 nmap <leader>b <Action>(ToggleLineBreakpoint)
-vmap <C-r> <Action>(RenameElement)
-nmap <C-r> <Action>(RenameElement)
 nmap <leader>ca <Action>(ShowIntentionActions)
 nmap <leader>rf <Action>(Refactorings.QuickListPopupAction)
 vmap <leader>rf <Action>(Refactorings.QuickListPopupAction)
@@ -31,3 +29,4 @@ map mp <A-p>
 "" Map \r to the Reformat Code action
 "map \r <Action>(ReformatCode)
 
+set clipboard+=ideaput
