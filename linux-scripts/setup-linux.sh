@@ -5,11 +5,11 @@ sudo add-apt-repository ppa:neovim-ppa/unstable
 sudo apt update && sudo apt upgrade -y
 flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 flatpak install --user org.telegram.desktop
-flatpak install --user com.spotify.Client
 flatpak install --user org.remmina.Remmina
 
 mkdir ~/.fonts
 cp ../fonts/'comic code'/'Comic Code Ligatures'/* ~/.fonts
+cp ../fonts/nerdfonts/* ~/.fonts
 # Nord software
 sudo apt install snapd
 sudo snap install nordpass
