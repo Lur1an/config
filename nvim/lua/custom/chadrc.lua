@@ -14,6 +14,9 @@ M.ui = {
 
   hl_override = highlights.override,
   hl_add = highlights.add,
+  tabufline = {
+    enabled = false,
+  },
 }
 
 M.plugins = "custom.plugins"
@@ -31,5 +34,8 @@ opt.shiftwidth = 4
 opt.smartindent = true
 opt.tabstop = 4
 opt.softtabstop = 4
+opt.relativenumber = true
+opt.signcolumn = "no"
+
 
 return M

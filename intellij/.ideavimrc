@@ -1,5 +1,16 @@
-"" Source your .vimrc
-source ~/.config/nvim/.vimrc
+let mapleader=" "
+
+set relativenumber
+set rnu
+set scrolloff=8
+set incsearch
+set smartindent
+set wrap!
+set expandtab
+set tabstop=4
+set shiftwidth=4
+set softtabstop=4
+set undofile
 "" Editing
 set ideajoin
 set clipboard=unnamedplus
@@ -30,3 +41,11 @@ map mp <A-p>
 "map \r <Action>(ReformatCode)
 
 set clipboard+=ideaput
+" Register remaps
+" vnoremap <leader>p "_dP
+" nnoremap <leader>y "+y
+" vnoremap <leader>y "+y
+" nnoremap <leader>Y "+Y
+" vnoremap <leader>Y "+Y
+" nnoremap <leader>d "_d
+" vnoremap <leader>d "_d
