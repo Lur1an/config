@@ -1,5 +1,7 @@
 local M = {}
 
+M.blankline = { }
+
 M.treesitter = {
   ensure_installed = {
     "vim",

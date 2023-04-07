@@ -1,13 +1,25 @@
 ---@type MappingsTable
 local M = {}
 
+M.disabled = {
+  n = {
+    ["<leader>x"] = "",
+  },
+}
+
 M.general = {
   n = {
-    -- [";"] = { ":", "enter command mode", opts = { nowait = true } },
+    ["q"] = {
+      function()
+        require("nvchad_ui.tabufline").close_buffer()
+      end,
+      "close buffer",
+    },
+    ["<C-S-p"] = { ":", "enter command mode", opts = { nowait = true } },
     ["n"] = { "nzzzv", "find next occurrence" },
     ["N"] = { "Nzzzv", "find previous occurrence" },
-    ["<leader>k"] = { ":lnext<CR>zz", "quickfix next" },
-    ["<leader>j"] = { ":lprev<CR>zz", "quickfix previous" },
+    ["<leader>k"] = { ":lnext<CR>zz", "location next" },
+    ["<leader>j"] = { ":lprev<CR>zz", "location previous" },
     ["<C-u>"] = { "<C-u>zz", "scroll up" },
     ["<C-d>"] = { "<C-d>zz", "scroll down" },
   },
@@ -17,13 +29,16 @@ M.general = {
 }
 
 M.harpoon = {
-  plugin = true,
   n = {
-    ["<leader>a"] = { require("harpoon.mark").add_file },
+    ["<C-e>"] = {
+      function()
+        require("harpoon.ui").toggle_quick_menu()
+      end,
+      "harpoon toggle quick menu",
+    },
   },
 }
 
-M.telescope = {}
 -- more keybinds!
 
 return M
