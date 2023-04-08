@@ -13,12 +13,7 @@ M.disabled = {
 
 M.general = {
   n = {
-    ["q"] = {
-      function()
-        require("nvchad_ui.tabufline").close_buffer()
-      end,
-      "close buffer",
-    },
+    ["q"] = { "<C-w>q", "close window" },
     [";"] = { ":", "enter command mode", opts = { nowait = true } },
     ["n"] = { "nzzzv", "find next occurrence" },
     ["N"] = { "Nzzzv", "find previous occurrence" },
