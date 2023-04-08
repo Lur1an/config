@@ -11,41 +11,71 @@ set tabstop=4
 set shiftwidth=4
 set softtabstop=4
 set undofile
+nnoremap <leader>k :lnext<CR>zz
+nnoremap <leader>j :lprev<CR>zz
+nnoremap <C-d> <C-d>zz
+nnoremap <C-u> <C-u>zz
+vnoremap " c""<C-c>P
+vnoremap ( c()<C-c>P
+vnoremap { c{}<C-c>P
+vnoremap [ c[]<C-c>P
+vnoremap ' c''<C-c>P
+vnoremap ` c``<C-c>P
 "" Editing
 set ideajoin
 set clipboard=unnamedplus
 vmap J <Action>(MoveLineDown)
 vmap K <Action>(MoveLineUp)
+"" Navigation in Insert Mode
+imap <C-j> <Down>
+imap <C-k> <Up>
+imap <C-l> <Right>
+imap <C-h> <Left>
+"" Window Navigation Normal mode
+nmap <C-j> <C-w>j
+nmap <C-k> <C-w>k
+nmap <C-l> <C-w>l
+nmap <C-h> <C-w>h
+nmap <leader>q <Action>(CloseAllEditorsButActive)
+nmap <C-w>v <Action>(MoveTabRight)
+nmap <C-w>s <Action>(MoveTabDown)
+nmap <M-l> <Action>(MoveEditorToOppositeTabGroup)
 "" IDE Remaps
+nmap <leader>th <Action>(ChangeLaf)
+nmap <M-i> <Action>(ActivateTerminalToolWindow)
+nmap <leader>ff <Action>(GotoFile)
+nmap <leader>fw <Action>(FindInPath)
 nmap <leader>gc <Action>(Generate)
-nmap <leader>f <Action>(ReformatCode)
 nmap <leader>s <Action>(Switcher)
+"" Debugging
 map <leader>x <Action>(EvaluateExpression)
-nmap <leader>b <Action>(ToggleLineBreakpoint)
+nmap <leader>br <Action>(ToggleLineBreakpoint)
+"" Language Server
+nmap <leader>fm <Action>(ReformatCode)
 nmap <leader>ca <Action>(ShowIntentionActions)
 nmap <leader>rf <Action>(Refactorings.QuickListPopupAction)
+nmap <leader>ra <Action>(RenameElement)
+vmap <leader>ra <Action>(RenameElement)
 vmap <leader>rf <Action>(Refactorings.QuickListPopupAction)
+nmap <leader>/ <Action>(CommentByLineComment)
+vmap <leader>/ <Action>(CommentByLineComment)
 "" Code Navigation
 nmap ]d <Action>(GotoNextError)
 nmap [d <Action>(GotoPreviousError)
 nmap gh <Action>(ShowErrorDescription)
 nmap q <Action>(CloseEditor)
 nmap gi <Action>(GotoImplementation)
-" Don't use Ex mode, use Q for formatting.
-map mc <A-n>
-map mx <A-x>
-map mp <A-p>
+nmap gr <Action>(FindUsages)
 
-"" -- Map IDE actions to IdeaVim -- https://jb.gg/abva4t
-"" Map \r to the Reformat Code action
-"map \r <Action>(ReformatCode)
+nmap ; <Action>(GotoAction)
 
-set clipboard+=ideaput
 " Register remaps
-" vnoremap <leader>p "_dP
 " nnoremap <leader>y "+y
 " vnoremap <leader>y "+y
 " nnoremap <leader>Y "+Y
 " vnoremap <leader>Y "+Y
-" nnoremap <leader>d "_d
-" vnoremap <leader>d "_d
+set clipboard+=unnamed
+vnoremap <leader>p "_dP
+" set clipboard+=ideaput
+ nnoremap <leader>d "_d
+ vnoremap <leader>d "_d

@@ -29,6 +29,7 @@ local opt = vim.opt
 opt.incsearch = true
 opt.foldmethod = "expr"
 opt.foldexpr = "nvim_treesitter#foldexpr()"
+opt.foldenable = false
 opt.expandtab = true
 opt.shiftwidth = 4
 opt.smartindent = true
