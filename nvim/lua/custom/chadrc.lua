@@ -3,24 +3,43 @@ local M = {}
 
 -- Path to overriding theme and highlights files
 local highlights = require "custom.highlights"
-
 M.ui = {
-  theme = "monekai",
-  theme_toggle = { "monekai", "one_light" },
-  transparency = true,
-  nvdash = {
-    load_on_startup = true,
-  },
+    theme = "catppuccin",
+    theme_toggle = { "catppuccin", "one_light" },
+    transparency = true,
+    nvdash = {
+        load_on_startup = false,
+    },
 
-  hl_override = highlights.override,
-  hl_add = highlights.add,
-  tabufline = {
-    enabled = false,
-  },
+    hl_override = highlights.override,
+    hl_add = highlights.add,
+    tabufline = {
+        enabled = true,
+    },
 }
 
 M.plugins = "custom.plugins"
-
+local hlgroups = {
+    "TblineFill",
+    "TbLineBufOn",
+    "TbLineBufOff",
+    "TbLineBufOnModified",
+    "TbBufLineBufOffModified",
+    "TbLineBufOnClose",
+    "TbLineBufOffClose",
+    "TblineTabNewBtn",
+    "TbLineTabOn",
+    "TbLineTabOff",
+    "TbLineTabCloseBtn",
+    "TBTabTitle",
+    "TbLineThemeToggleBtn",
+    "TbLineCloseAllBufsBtn",
+    "Normal",
+    "NvimTreeNormal",
+}
+for _, hlgroup in ipairs(hlgroups) do
+    M.ui.hl_override[hlgroup] = { bg = "none" }
+end
 -- check core.mappings for table structure
 M.mappings = require "custom.mappings"
 
@@ -37,6 +56,5 @@ opt.tabstop = 4
 opt.softtabstop = 4
 opt.relativenumber = true
 opt.signcolumn = "no"
-
 
 return M

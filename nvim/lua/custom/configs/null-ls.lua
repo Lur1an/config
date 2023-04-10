@@ -22,7 +22,7 @@ local sources = {
     -- rust
     b.formatting.rustfmt,
     --python
-    b.diagnostics.mypy,
+    -- b.diagnostics.mypy,
 }
 
 null_ls.setup {
