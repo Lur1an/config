@@ -4,14 +4,15 @@ local overrides = require "custom.configs.overrides"
 local plugins = {
 
     -- Override plugin definition options
+    { "mfussenegger/nvim-dap" },
     {
         "zbirenbaum/copilot.lua",
         cmd = "Copilot",
-        event = "InsertEnter",
         config = function()
-            require("copilot").setup(require "custom.configs.copilot")
+            require("copilot").setup {}
         end,
     },
+
     {
         "zbirenbaum/copilot-cmp",
         after = { "copilot.lua" },
