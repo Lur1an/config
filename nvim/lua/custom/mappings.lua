@@ -4,11 +4,21 @@ local M = {}
 M.disabled = {
     n = {
         ["<leader>x"] = "",
-        ["<leader>b"] = "",
         ["<leader>v"] = "",
         ["<leader>h"] = "",
         ["<leader>n"] = "",
         ["<leader>rn"] = "",
+    },
+}
+
+M.dap = {
+    n = {
+        ["<leader>b"] = {
+            function()
+                require("dap").toggle_breakpoint()
+            end,
+            "toggle breakpoint",
+        },
     },
 }
 
