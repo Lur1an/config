@@ -8,6 +8,7 @@ local b = null_ls.builtins
 
 local sources = {
 
+    b.code_actions.refactoring,
     -- webdev stuff
     b.formatting.deno_fmt, -- choosed deno for ts/js files cuz its very fast!
     b.formatting.prettier.with { filetypes = { "html", "markdown", "css" } }, -- so prettier works only on these filetypes
@@ -22,7 +23,8 @@ local sources = {
     -- rust
     b.formatting.rustfmt,
     --python
-    -- b.diagnostics.mypy,
+    b.formatting.black,
+    b.diagnostics.mypy,
 }
 
 null_ls.setup {

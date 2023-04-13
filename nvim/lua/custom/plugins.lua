@@ -2,8 +2,6 @@ local overrides = require "custom.configs.overrides"
 
 ---@type NvPluginSpec[]
 local plugins = {
-
-    -- Override plugin definition options
     {
         "rcarriga/nvim-dap-ui",
         requires = { "mfussenegger/nvim-dap" },
@@ -13,6 +11,9 @@ local plugins = {
         "mfussenegger/nvim-dap",
         lazy = false,
     },
+    -- {
+    --     "mfussenegger/nvim-dap-python",
+    -- },
     {
         "zbirenbaum/copilot.lua",
         lazy = false,
@@ -81,12 +82,6 @@ local plugins = {
             require("better_escape").setup()
         end,
     },
-
-    -- To make a plugin not be loaded
-    -- {
-    --   "NvChad/nvim-colorizer.lua",
-    --   enabled = false
-    -- },
 }
 
 return plugins

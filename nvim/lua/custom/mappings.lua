@@ -19,6 +19,18 @@ M.dap = {
             end,
             "toggle breakpoint",
         },
+        ["<leader>B"] = {
+            function()
+                require("dap").set_breakpoint()
+            end,
+            "toggle breakpoint",
+        },
+        ["<F9>"] = {
+            function()
+                require("dap-python").test_method()
+            end,
+            "debug test method"
+        }
     },
 }
 

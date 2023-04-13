@@ -4,8 +4,8 @@ local M = {}
 -- Path to overriding theme and highlights files
 local highlights = require "custom.highlights"
 M.ui = {
-    theme = "nightfox",
-    theme_toggle = { "nightfox", "one_light" },
+    theme = "bearded-arc",
+    theme_toggle = { "bearded-arc", "one_light" },
     transparency = true,
     nvdash = {
         load_on_startup = false,
