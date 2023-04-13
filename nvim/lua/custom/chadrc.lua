@@ -4,9 +4,9 @@ local M = {}
 -- Path to overriding theme and highlights files
 local highlights = require "custom.highlights"
 M.ui = {
-    theme = "bearded-arc",
-    theme_toggle = { "bearded-arc", "one_light" },
-    transparency = true,
+    theme = "catppuccin",
+    theme_toggle = { "catppuccin", "one_light" },
+    transparency = false,
     nvdash = {
         load_on_startup = false,
     },
@@ -37,9 +37,9 @@ local hlgroups = {
     "Normal",
     "NvimTreeNormal",
 }
-for _, hlgroup in ipairs(hlgroups) do
-    M.ui.hl_override[hlgroup] = { bg = "none" }
-end
+-- for _, hlgroup in ipairs(hlgroups) do
+--     M.ui.hl_override[hlgroup] = { bg = "none" }
+-- end
 -- check core.mappings for table structure
 M.mappings = require "custom.mappings"
 

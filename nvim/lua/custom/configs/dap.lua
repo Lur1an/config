@@ -1,9 +1,10 @@
 local dap = require "dap"
 
+dap.setup()
 -- Python
 dap.adapters.python = {
     type = "executable",
-    command = os.getenv "VIRTUAL_ENV" + "/bin/python",
+   command = os.getenv "VIRTUAL_ENV" + "/bin/python",
     args = { "-m", "debugpy.adapter" },
 }
 
@@ -20,6 +21,6 @@ dap.configurations.python = {
     },
 }
 
--- local dap_python = require "dap-python"
--- dap_python.setup(os.getenv "VIRTUAL_ENV" + "/bin/python")
+local dap_python = require "dap-python"
+dap_python.setup(os.getenv "VIRTUAL_ENV" + "/bin/python")
 -- Rust

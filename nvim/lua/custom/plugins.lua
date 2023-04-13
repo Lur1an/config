@@ -7,6 +7,7 @@ local plugins = {
         requires = { "mfussenegger/nvim-dap" },
         lazy = false,
     },
+    { "mfussenegger/nvim-dap-python" },
     {
         "mfussenegger/nvim-dap",
         lazy = false,
