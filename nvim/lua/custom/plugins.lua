@@ -4,15 +4,19 @@ local overrides = require "custom.configs.overrides"
 local plugins = {
     {
         "rcarriga/nvim-dap-ui",
-        lazy = false,
+        opts = require("custom.configs.dap-ui")
     },
     {
         "mfussenegger/nvim-dap-python",
-        lazy = false
+        config = function()
+            require("dap-python").setup(os.getenv "VIRTUAL_ENV" .. "/bin/python")
+        end
     },
     {
         "mfussenegger/nvim-dap",
-        lazy = false,
+        config = function()
+            require("custom.configs.dap")
+        end,
     },
     -- {
     --     "mfussenegger/nvim-dap-python",
@@ -22,7 +26,7 @@ local plugins = {
         lazy = false,
         cmd = "Copilot",
         config = function()
-            require("copilot").setup {}
+            require("copilot").setup()
         end,
     },
 
@@ -35,8 +39,6 @@ local plugins = {
     },
     {
         "https://github.com/doki-theme/doki-theme-vim.git",
-        lazy = false,
-        priority = 1000,
     },
     {
         "theprimeagen/harpoon",

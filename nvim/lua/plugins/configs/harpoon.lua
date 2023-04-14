@@ -1,4 +1,3 @@
 local harpoon = require "harpoon"
-return {
-
-}
+local M = {}
+return M

@@ -1,6 +1,4 @@
-local dap_ui = require "dapui"
-
-dap_ui.setup {
+local M = {
     layouts = {
         {
             elements = {
@@ -25,6 +23,8 @@ dap_ui.setup {
         element = "scopes",
     },
 }
+
+-- Style configurations for Dap
 vim.api.nvim_set_hl(0, "DapBreakpoint", { ctermbg = 0, fg = "#993939", bg = "#31353f" })
 vim.api.nvim_set_hl(0, "DapLogPoint", { ctermbg = 0, fg = "#61afef", bg = "#31353f" })
 vim.api.nvim_set_hl(0, "DapStopped", { ctermbg = 0, fg = "#98c379", bg = "#31353f" })
@@ -46,3 +46,5 @@ vim.fn.sign_define(
     { text = "", texthl = "DapLogPoint", linehl = "DapLogPoint", numhl = "DapLogPoint" }
 )
 vim.fn.sign_define("DapStopped", { text = "", texthl = "DapStopped", linehl = "DapStopped", numhl = "DapStopped" })
+
+return M

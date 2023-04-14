@@ -84,11 +84,17 @@ M.harpoon = {
             end,
             "add file",
         },
-        ["<C-m>"] = {
+        ["<C-f>"] = {
             function()
                 require("harpoon.ui").nav_file(1)
             end,
             "nav file 1",
+        },
+        ["<C-g>"] = {
+            function()
+                require("harpoon.ui").nav_file(2)
+            end,
+            "nav file 2",
         },
     },
 }
