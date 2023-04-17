@@ -1,3 +1,4 @@
+---@diagnostic disable: different-requires
 ---@type MappingsTable
 local M = {}
 
@@ -13,24 +14,54 @@ M.disabled = {
 
 M.dap = {
     n = {
+        ["<C-y>"] = {
+            function()
+                require("dapui").toggle()
+            end,
+            "toggle ui",
+        },
         ["<leader>b"] = {
             function()
                 require("dap").toggle_breakpoint()
             end,
             "toggle breakpoint",
         },
-        ["<leader>B"] = {
-            function()
-                require("dap").set_breakpoint()
-            end,
-            "toggle breakpoint",
-        },
         ["<F9>"] = {
             function()
-                require("dap-python").test_method()
+                require("custom.language_mappings").debug_test[vim.bo.filetype]()
             end,
-            "debug test method"
-        }
+            "debug test",
+        },
+        ["<F10>"] = {
+            function()
+                require("dap").step_over()
+            end,
+            "step over",
+        },
+        ["<F5>"] = {
+            function()
+                require("dap").continue()
+            end,
+            "continue",
+        },
+    },
+    v = {
+        ["<C-k>"] = {
+            function()
+                require("dapui").eval()
+            end,
+            "evaluate selection",
+        },
+    },
+}
+
+M.gpt = {
+    n = {
+        ["<leader>gpt"] = {
+            function()
+                require("chatgpt").openChat()
+            end,
+        },
     },
 }
 

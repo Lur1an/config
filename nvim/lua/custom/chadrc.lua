@@ -4,8 +4,8 @@ local M = {}
 -- Path to overriding theme and highlights files
 local highlights = require "custom.highlights"
 M.ui = {
-    theme = "aquarium",
-    theme_toggle = { "aquarium", "one_light" },
+    theme = "bearded-arc",
+    theme_toggle = { "bearded-arc", "one_light" },
     transparency = false,
     nvdash = {
         load_on_startup = false,
@@ -57,6 +57,5 @@ opt.smartindent = true
 opt.tabstop = 4
 opt.softtabstop = 4
 opt.relativenumber = true
-opt.signcolumn = "no"
 
 return M

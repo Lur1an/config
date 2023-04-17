@@ -1,6 +1,7 @@
 ZSH_THEME="awesomepanda" # set by `omz`
 
 export ZSH="/home/lurian/.oh-my-zsh"
+export OPENAI_API_KEY="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"
 zsh_theme="robbyrussell"
 
 plugins=(git poetry)
