@@ -20,8 +20,6 @@ local sources = {
 
     -- cpp
     b.formatting.clang_format,
-    -- rust
-    b.formatting.rustfmt,
     --python
     b.formatting.black,
     b.diagnostics.mypy,

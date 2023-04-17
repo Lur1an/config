@@ -4,13 +4,15 @@ local M = {}
 -- Path to overriding theme and highlights files
 local highlights = require "custom.highlights"
 M.ui = {
-    theme = "oxocarbon",
-    theme_toggle = { "oxocarbon", "one_light" },
+    theme = "aquarium",
+    theme_toggle = { "aquarium", "one_light" },
     transparency = false,
     nvdash = {
         load_on_startup = false,
     },
-
+    telescope = {
+        style = "bordered", -- borderless / bordered
+      },
     hl_override = highlights.override,
     hl_add = highlights.add,
     tabufline = {

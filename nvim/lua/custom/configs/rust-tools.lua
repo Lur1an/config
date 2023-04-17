@@ -1,0 +1,10 @@
+local on_attach = require('plugins.configs.lspconfig').on_attach
+local capabilities = require('plugins.configs.lspconfig').capabilities
+
+local opts = {
+    server = {
+        on_attach = on_attach,
+        capabilities = capabilities,
+    }
+}
+return opts

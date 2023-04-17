@@ -3,24 +3,36 @@ local overrides = require "custom.configs.overrides"
 ---@type NvPluginSpec[]
 local plugins = {
     {
+        "simrat39/rust-tools.nvim",
+        ft = "rust",
+        dependencies = "neovim/nvim-lspconfig",
+        opts = function()
+            return require "custom.configs.rust-tools"
+        end,
+    },
+    {
+        "rust-lang/rust.vim",
+        ft = "rust",
+        init = function()
+            vim.g.rustfmt_autosave = 1
+        end,
+    },
+    {
         "rcarriga/nvim-dap-ui",
-        opts = require("custom.configs.dap-ui")
+        opts = require "custom.configs.dap-ui",
     },
     {
         "mfussenegger/nvim-dap-python",
         config = function()
             require("dap-python").setup(os.getenv "VIRTUAL_ENV" .. "/bin/python")
-        end
+        end,
     },
     {
         "mfussenegger/nvim-dap",
         config = function()
-            require("custom.configs.dap")
+            require "custom.configs.dap"
         end,
     },
-    -- {
-    --     "mfussenegger/nvim-dap-python",
-    -- },
     {
         "zbirenbaum/copilot.lua",
         lazy = false,

@@ -51,7 +51,7 @@ nmap <leader>gc <Action>(Generate)
 nmap <leader>s <Action>(Switcher)
 "" Debugging
 map <leader>x <Action>(EvaluateExpression)
-nmap <leader>br <Action>(ToggleLineBreakpoint)
+nmap <leader>b <Action>(ToggleLineBreakpoint)
 "" Language Server
 nmap <leader>fm <Action>(ReformatCode)
 nmap <leader>ca <Action>(ShowIntentionActions)
