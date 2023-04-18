@@ -8,15 +8,17 @@ local b = null_ls.builtins
 
 local sources = {
 
-    b.code_actions.refactoring,
-    -- webdev stuff
-    b.formatting.deno_fmt, -- choosed deno for ts/js files cuz its very fast!
-    b.formatting.prettier.with { filetypes = { "html", "markdown", "css" } }, -- so prettier works only on these filetypes
+    -- frontend dev
+    b.formatting.deno_fmt,
+    b.formatting.prettier.with { filetypes = { "html", "markdown", "css", "yaml" } }, -- so prettier works only on these filetypes
 
     -- Lua
     b.formatting.stylua,
     -- general
     b.code_actions.refactoring,
+
+    --docker
+    b.diagnostics.hadolint,
 
     -- cpp
     b.formatting.clang_format,
