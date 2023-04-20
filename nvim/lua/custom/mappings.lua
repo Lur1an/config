@@ -88,6 +88,8 @@ M.general = {
         ["<C-u>"] = { "<C-u>zz", "scroll up" },
         ["<C-d>"] = { "<C-d>zz", "scroll down" },
         ["<leader>d"] = { '"_d', "delete into void" },
+        ["<C-o>"] = {"<C-o>zz", "jump back (with line centering)"},
+        ["<C-i>"] = {"<C-i>zz", "jump foward (with line centering)"}
     },
     v = {
         ["K"] = { ":m'<-2<CR>gv=gv", "move selection up" },

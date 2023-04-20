@@ -20,7 +20,7 @@ local plugins = {
         dependencies = "neovim/nvim-lspconfig",
         config = function()
             require "custom.configs.rust-tools"
-        end
+        end,
     },
     {
         "rust-lang/rust.vim",
