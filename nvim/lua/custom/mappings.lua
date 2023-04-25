@@ -131,6 +131,19 @@ M.harpoon = {
             end,
             "nav file 2",
         },
+        ["<C-;>"] = {
+            function()
+                require("harpoon.ui").nav_file(3)
+            end,
+            "nav file 3",
+            nore=true
+        },
+        ["<C-'>"] = {
+            function()
+                require("harpoon.ui").nav_file(4)
+            end,
+            "nav file 4",
+        },
     },
 }
 

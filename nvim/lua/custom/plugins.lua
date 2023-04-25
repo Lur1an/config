@@ -5,9 +5,7 @@ local plugins = {
     {
         "jackMort/ChatGPT.nvim",
         event = "VeryLazy",
-        config = function()
-            require("chatgpt").setup()
-        end,
+        opts = require "custom.configs.chat-gpt",
         dependencies = {
             "MunifTanjim/nui.nvim",
             "nvim-lua/plenary.nvim",
@@ -47,19 +45,10 @@ local plugins = {
     },
     {
         "zbirenbaum/copilot.lua",
+        event = "InsertEnter",
         lazy = false,
         cmd = "Copilot",
-        config = function()
-            require("copilot").setup()
-        end,
-    },
-
-    {
-        "zbirenbaum/copilot-cmp",
-        lazy = false,
-        config = function()
-            require("copilot_cmp").setup()
-        end,
+        opts = require "custom/configs/copilot",
     },
     {
         "https://github.com/doki-theme/doki-theme-vim.git",
