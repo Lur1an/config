@@ -22,7 +22,9 @@ for _, lsp in ipairs(servers) do
         capabilities = capabilities,
     }
 end
-
+vim.lsp.buf.format {
+  filter = function(client) return client.name ~= "tsserver" end
+}
 lspconfig.rust_analyzer.setup {
     on_attach = on_attach,
     capabilities = capabilities,

@@ -3,6 +3,23 @@ local overrides = require "custom.configs.overrides"
 ---@type NvPluginSpec[]
 local plugins = {
     {
+        "windwp/nvim-ts-autotag",
+        event = "InsertEnter",
+        dependencies = "nvim-treesitter/nvim-treesitter",
+        config = function()
+            require("nvim-ts-autotag").setup()
+            require("nvim-treesitter.configs").setup {
+                autotag = {
+                    enable = true,
+                },
+            }
+        end,
+    },
+
+    {
+        "andweeb/presence.nvim",
+    },
+    {
         "jackMort/ChatGPT.nvim",
         event = "VeryLazy",
         opts = require "custom.configs.chat-gpt",

@@ -10,7 +10,7 @@ local sources = {
 
     -- frontend dev
     b.formatting.deno_fmt,
-    b.formatting.prettier.with { filetypes = { "html", "markdown", "css", "yaml", "svelte", "tsx", "jsx" } }, -- so prettier works only on these filetypes
+    b.formatting.prettier.with { filetypes = { "html", "markdown", "css", "yaml", "svelte", "tsx", "jsx", "typescript" } }, -- so prettier works only on these filetypes
 
     -- Lua
     b.formatting.stylua,
