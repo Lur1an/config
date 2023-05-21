@@ -1,4 +1,5 @@
 local M = {}
+
 M.debug_test = {
     rust = function()
         vim.cmd "RustDebuggables"

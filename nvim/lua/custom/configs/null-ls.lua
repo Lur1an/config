@@ -10,7 +10,9 @@ local sources = {
 
     -- frontend dev
     b.formatting.deno_fmt,
-    b.formatting.prettier.with { filetypes = { "html", "markdown", "css", "yaml", "svelte", "tsx", "jsx", "typescript" } }, -- so prettier works only on these filetypes
+    b.formatting.prettier.with {
+        filetypes = { "json", "html", "markdown", "css", "yaml", "svelte", "tsx", "jsx", "typescript" },
+    }, -- so prettier works only on these filetypes
 
     -- Lua
     b.formatting.stylua,
@@ -24,7 +26,7 @@ local sources = {
     b.formatting.clang_format,
     --python
     b.formatting.black,
-    -- b.diagnostics.mypy,
+    b.diagnostics.mypy,
 }
 
 null_ls.setup {

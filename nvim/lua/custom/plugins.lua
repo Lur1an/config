@@ -18,6 +18,14 @@ local plugins = {
 
     {
         "andweeb/presence.nvim",
+        lazy = false,
+        opts = {
+            auto_update = true,
+            neovim_image_text = "can't quit vim",
+            main_image = "file",
+            git_commit_text = "commiting war crimes",
+            buttons = false,
+        },
     },
     {
         "jackMort/ChatGPT.nvim",
