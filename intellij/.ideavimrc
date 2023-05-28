@@ -40,6 +40,7 @@ nmap <leader>q <Action>(CloseAllEditorsButActive)
 nmap <C-w>v <Action>(MoveTabRight)
 nmap <C-w>s <Action>(MoveTabDown)
 nmap <M-l> <Action>(MoveEditorToOppositeTabGroup)
+nmap <M-h> <Action>(MoveEditorToOppositeTabGroup)
 nmap <TAB> <Action>(NextTab)
 nmap <S-TAB> <Action>(PreviousTab)
 "" IDE Remaps

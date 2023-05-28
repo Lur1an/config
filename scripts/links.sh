@@ -1,0 +1,11 @@
+rm -rf ~/.ideavimrc
+rm -rf ~/.config/nvim
+rm -rf ~/.zshrc
+rm -rf ~/.tmux.conf
+(cd ../nvim; ln -s $(pwd) ~/.config/nvim)
+(cd ../intellij; ln -s $(pwd)/.ideavimrc ~/.ideavimrc)
+(cd ../tmux; ln -s $(pwd)/.tmux.conf ~/.tmux.conf)
+mkdir ~/.config/alacritty
+(cd ../alacritty; ln -s $(pwd)/alacritty.yml ~/.config/alacritty/alacritty.yml)
+(cd ../zsh/; ln -s $(pwd)/.zshrc ~/.zshrc)
+
