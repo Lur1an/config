@@ -14,7 +14,7 @@ local servers = {
     "tsserver",
     "clangd",
     "pyright",
-    "marksman"
+    "marksman",
 }
 
 for _, lsp in ipairs(servers) do

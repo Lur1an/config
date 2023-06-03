@@ -16,6 +16,7 @@ M.treesitter = {
         "markdown_inline",
         "python",
         "rust",
+        "proto"
     },
     indent = {
         enable = true,

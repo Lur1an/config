@@ -24,3 +24,5 @@ git clone https://github.com/doki-theme/doki-theme-vim.git ~/.local/share/nvim/s
 ln -s $(which fdfind) ~/.local/bin/fd
 # Rust
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+mkdir -p ~/.config/alacritty/themes
+git clone https://github.com/alacritty/alacritty-theme ~/.config/alacritty/themes
