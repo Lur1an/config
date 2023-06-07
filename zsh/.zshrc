@@ -13,6 +13,7 @@ export N_PREFIX="$HOME/n"; [[ :$PATH: == *":$N_PREFIX/bin:"* ]] || PATH+=":$N_PR
 source ~/.secrets
 alias rel="xrdb merge ~/.xresources && kill -USR1 $(pidof st)"
 alias tmux='TERM=screen-256color tmux'
+alias ezpush='aicommits --all && git push'
 
 function rust_dev() {
     export RUST_LOG=info
