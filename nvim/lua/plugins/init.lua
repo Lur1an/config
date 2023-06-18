@@ -8,7 +8,7 @@ local default_plugins = {
   { "NvChad/extensions", branch = "v2.0" },
 
   {
-    "lur1an/base46",
+    "NvChad/base46",
     branch = "v2.0",
     build = function()
       require("base46").load_all_highlights()

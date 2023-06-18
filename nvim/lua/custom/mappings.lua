@@ -44,6 +44,12 @@ M.dap = {
             end,
             "continue",
         },
+        ["<F8>"] = {
+            function()
+                require("dap").terminate()
+            end,
+            "continue",
+        },
     },
     v = {
         ["<C-k>"] = {
