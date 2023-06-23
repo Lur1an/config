@@ -19,6 +19,10 @@ function rust_dev() {
     export RUST_LOG=info
     cargo-watch -x check -x "test $1 -- --nocapture"
 }
+function boot_windows() {
+    systemctl reboot --boot-loader-entry=auto-windows
+}
 
 alias rust-dev='rust_dev'
+alias boot-windows='boot_windows'
 
