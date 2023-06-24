@@ -6,10 +6,15 @@ sudo apt update && sudo apt upgrade -y
 sudo apt install tmux
 sudo apt install gnome-tweaks
 sudo apt install ripgrep
-
+sudo apt install discord
+sudo apt install build-essentials
+sudo apt install cmake pkg-config libfreetype6-dev libfontconfig1-dev libxcb-xfixes0-dev libxkbcommon-dev python3
+sudo apt install python3.10-full
+curl -sSL https://install.python-poetry.org | python3 -
 flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 flatpak install --user org.telegram.desktop
 flatpak install --user org.remmina.Remmina
+flatpak install --user io.github.jeffshee.Hidamari
 
 mkdir ~/.fonts
 cp ../fonts/'comic code'/'Comic Code Ligatures'/* ~/.fonts
@@ -17,6 +22,7 @@ cp ../fonts/nerdfonts/* ~/.fonts
 # Nord software
 sudo apt install snapd
 sudo snap install nordpass
+sh <(curl -sSf https://downloads.nordcdn.com/apps/linux/install.sh)
 # Neovim
 sudo apt install neovim
 # Remap fdfind to fd
