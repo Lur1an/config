@@ -78,10 +78,9 @@ M.telescope = {
 }
 M.general = {
     i = {
-        ["<ESC>"] = {"<cmd> w <CR><C-c>", "save and exit insert mode" }
+        ["<C-c>"] = {"<cmd> w <CR><ESC>", "save and exit insert mode" }
     },
     n = {
-        ["<ESC>"] = {"<cmd> w <CR>", "save" },
         ["q"] = {
             function()
                 require("nvchad_ui.tabufline").close_buffer()
