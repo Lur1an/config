@@ -24,7 +24,7 @@ sudo snap install nordpass
 # Neovim
 sudo apt install neovim
 # Remap fdfind to fd
-ln -s $(which fdfind) ~/.local/bin/fd
+ln -s $(which fdfind) /usr/local/bin/fd
 
 # Rust
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh

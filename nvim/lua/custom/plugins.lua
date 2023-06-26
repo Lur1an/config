@@ -28,16 +28,6 @@ local plugins = {
         },
     },
     {
-        "jackMort/ChatGPT.nvim",
-        event = "VeryLazy",
-        opts = require "custom.configs.chat-gpt",
-        dependencies = {
-            "MunifTanjim/nui.nvim",
-            "nvim-lua/plenary.nvim",
-            "nvim-telescope/telescope.nvim",
-        },
-    },
-    {
         "simrat39/rust-tools.nvim",
         ft = "rust",
         dependencies = "neovim/nvim-lspconfig",
