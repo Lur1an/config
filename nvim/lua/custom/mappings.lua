@@ -4,6 +4,8 @@ local M = {}
 
 M.disabled = {
     n = {
+        ["<C-n>"] = "",
+        ["<leader>e"] = "",
         ["<leader>x"] = "",
         ["<leader>v"] = "",
         ["<leader>h"] = "",
@@ -71,14 +73,9 @@ M.gpt = {
     },
 }
 
-M.telescope = {
-    n = {
-        ["<C-p>"] = { "<cmd> Telescope git_files <CR>", "find git files" },
-    },
-}
 M.general = {
     i = {
-        ["<C-c>"] = {"<cmd> w <CR><ESC>", "save and exit insert mode" }
+        ["<C-c>"] = { "<cmd> w <CR><ESC>", "save and exit insert mode" },
     },
     n = {
         ["q"] = {
@@ -87,7 +84,7 @@ M.general = {
             end,
             "close buffer",
         },
-        [";"] = { ":", "enter command mode", opts = { nowait = true } },
+        -- [";"] = { ":", "enter command mode", opts = { nowait = true } },
         ["n"] = { "nzzzv", "find next occurrence" },
         ["N"] = { "Nzzzv", "find previous occurrence" },
         ["<leader>k"] = { ":lnext<CR>zz", "location next" },
@@ -140,23 +137,39 @@ M.harpoon = {
             end,
             "nav file 2",
         },
-        ["<C-;>"] = {
+        ["<C-n>"] = {
             function()
-                require("harpoon.ui").nav_file(3)
+                require("harpoon.ui").nav_next()
             end,
-            "nav file 3",
-            nore = true,
+            "navigate next",
         },
-        ["<C-'>"] = {
+        ["<C-p>"] = {
             function()
-                require("harpoon.ui").nav_file(4)
+                require("harpoon.ui").nav_prev()
             end,
-            "nav file 4",
+            "navigate previous",
         },
     },
 }
 M.lspconfig = {
     plugin = true,
+}
+
+M.nvimtree = {
+    plugin = true,
+    n = {
+        ["<leader>e"] = {
+            function()
+                local api = require "nvim-tree.api"
+                if api.tree.is_visible() then
+                    api.tree.close()
+                else
+                    api.tree.focus()
+                end
+            end,
+            "focus/open nvimtree (closes if open)",
+        },
+    },
 }
 
 -- more keybinds!
