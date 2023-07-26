@@ -9,6 +9,7 @@ source $ZSH/oh-my-zsh.sh
 alias fd='fdfind'
 
 
+export CARGO_TERM_COLOR=always
 export N_PREFIX="$HOME/n"; [[ :$PATH: == *":$N_PREFIX/bin:"* ]] || PATH+=":$N_PREFIX/bin"  # Added by n-install (see http://git.io/n-install-repo).
 source ~/.secrets
 alias rel="xrdb merge ~/.xresources && kill -USR1 $(pidof st)"

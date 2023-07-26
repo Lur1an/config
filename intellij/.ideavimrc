@@ -80,5 +80,5 @@ nmap ; <Action>(GotoAction)
 set clipboard+=unnamed
 vnoremap <leader>p "_dP
 " set clipboard+=ideaput
- nnoremap <leader>d "_d
- vnoremap <leader>d "_d
+nnoremap <leader>d "_d
+vnoremap <leader>d "_d

@@ -4,6 +4,26 @@ local capabilities = require("plugins.configs.lspconfig").capabilities
 local lspconfig = require "lspconfig"
 local util = require "lspconfig/util"
 
+lspconfig.rust_analyzer.setup {
+    on_attach = on_attach,
+    capabilities = capabilities,
+    filetypes = { "rust", "rs" },
+    root_dir = util.root_pattern "Cargo.toml",
+    settings = {
+        ["rust-analyzer"] = {
+            assist = {
+                importGranularity = "module",
+                importPrefix = "by_self",
+            },
+            cargo = {
+                allFeatures = true,
+            },
+            procMacro = {
+                enable = true,
+            },
+        },
+    },
+}
 
 -- if you just want default config for the servers then put them in a table
 local servers = {
@@ -23,28 +43,9 @@ for _, lsp in ipairs(servers) do
         capabilities = capabilities,
     }
 end
-vim.lsp.buf.format {
-  filter = function(client) return client.name ~= "tsserver" end
-}
-lspconfig.rust_analyzer.setup {
-    on_attach = on_attach,
-    capabilities = capabilities,
-    filetypes = { "rust", "rs" },
-    root_dir = util.root_pattern("Cargo.toml"),
-    settings = {
-        ["rust-analyzer"] = {
-            assist = {
-                importGranularity = "module",
-                importPrefix = "by_self",
-            },
-            cargo = {
-                allFeatures = true,
-            },
-            procMacro = {
-                enable = true,
-            },
-        },
-    },
-}
 
--- lspconfig.pyright.setup { blabla}
+vim.lsp.buf.format {
+    filter = function(client)
+        return client.name ~= "tsserver"
+    end,
+}

@@ -16,17 +16,17 @@ local plugins = {
         end,
     },
 
-    {
-        "andweeb/presence.nvim",
-        lazy = false,
-        opts = {
-            auto_update = true,
-            neovim_image_text = "can't quit vim",
-            main_image = "file",
-            git_commit_text = "commiting war crimes",
-            buttons = false,
-        },
-    },
+    -- {
+    --     "andweeb/presence.nvim",
+    --     lazy = false,
+    --     opts = {
+    --         auto_update = true,
+    --         neovim_image_text = "can't quit vim",
+    --         main_image = "file",
+    --         git_commit_text = "commiting war crimes",
+    --         buttons = false,
+    --     },
+    -- },
     {
         "simrat39/rust-tools.nvim",
         ft = "rust",
