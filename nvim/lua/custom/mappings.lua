@@ -46,6 +46,12 @@ M.dap = {
             end,
             "continue",
         },
+        ["<S-F5>"] = {
+            function()
+                require("dap").restart()
+            end,
+            "continue",
+        },
         ["<F8>"] = {
             function()
                 require("dap").terminate()
