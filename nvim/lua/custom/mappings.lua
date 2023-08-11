@@ -86,7 +86,7 @@ M.general = {
     n = {
         ["q"] = {
             function()
-                require("nvchad_ui.tabufline").close_buffer()
+                require("nvchad.tabufline").close_buffer()
             end,
             "close buffer",
         },
