@@ -16,6 +16,9 @@ lspconfig.rust_analyzer.setup {
                 importPrefix = "by_self",
             },
             cargo = {
+                buildScripts = {
+                    enable = true,
+                },
                 allFeatures = true,
             },
             procMacro = {
