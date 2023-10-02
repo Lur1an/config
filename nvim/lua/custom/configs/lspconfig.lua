@@ -16,6 +16,7 @@ lspconfig.rust_analyzer.setup {
                 importPrefix = "by_self",
             },
             cargo = {
+                features = {"napi"},
                 buildScripts = {
                     enable = true,
                 },
@@ -37,6 +38,7 @@ local servers = {
     "tsserver",
     "clangd",
     "pyright",
+    -- "vacuum",
     "marksman",
 }
 
