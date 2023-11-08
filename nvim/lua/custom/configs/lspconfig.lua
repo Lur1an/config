@@ -36,7 +36,6 @@ local servers = {
     "html",
     "cssls",
     "tsserver",
-    "clangd",
     "pyright",
     -- "vacuum",
     "marksman",

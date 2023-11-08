@@ -15,18 +15,26 @@ local plugins = {
             }
         end,
     },
+    {
+        "iamcco/markdown-preview.nvim",
+        cmd = { "MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop" },
+        ft = { "markdown" },
+        build = function()
+            vim.fn["mkdp#util#install"]()
+        end,
+    },
 
-    -- {
-    --     "andweeb/presence.nvim",
-    --     lazy = false,
-    --     opts = {
-    --         auto_update = true,
-    --         neovim_image_text = "can't quit vim",
-    --         main_image = "file",
-    --         git_commit_text = "commiting war crimes",
-    --         buttons = false,
-    --     },
-    -- },
+    {
+        "andweeb/presence.nvim",
+        lazy = false,
+        opts = {
+            auto_update = true,
+            neovim_image_text = "How do I exit this thing!? Help.",
+            main_image = "file",
+            blacklist = { "e1-rust" },
+            git_commit_text = "commiting war crimes",
+        },
+    },
     {
         "simrat39/rust-tools.nvim",
         ft = "rust",
@@ -90,7 +98,6 @@ local plugins = {
         end, -- Override to setup mason-lspconfig
     },
 
-    -- override plugin configs
     {
         "williamboman/mason.nvim",
         opts = overrides.mason,
@@ -113,6 +120,10 @@ local plugins = {
         config = function()
             require("better_escape").setup()
         end,
+    },
+    {
+        "tpope/vim-fugitive",
+        cmd = "Git",
     },
 }
 

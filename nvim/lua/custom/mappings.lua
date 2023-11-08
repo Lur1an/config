@@ -5,6 +5,7 @@ local M = {}
 M.disabled = {
     n = {
         ["<C-n>"] = "",
+        ["<C-s>"] = "",
         ["<leader>e"] = "",
         ["<leader>x"] = "",
         ["<leader>v"] = "",
@@ -95,6 +96,7 @@ M.general = {
         ["N"] = { "Nzzzv", "find previous occurrence" },
         ["<leader>k"] = { ":lnext<CR>zz", "location next" },
         ["<leader>j"] = { ":lprev<CR>zz", "location previous" },
+        ["<leader>s"] = { "<cmd> w <CR>", "Save file" },
         ["<M-j>"] = { ":cn<CR>zz", "quickfix next" },
         ["<M-k>"] = { ":cp<CR>zz", "quickfix previous" },
         ["<C-u>"] = { "<C-u>zz", "scroll up" },
@@ -131,17 +133,29 @@ M.harpoon = {
             end,
             "add file",
         },
-        ["<C-f>"] = {
+        ["<C-a>"] = {
             function()
                 require("harpoon.ui").nav_file(1)
             end,
             "nav file 1",
         },
-        ["<C-g>"] = {
+        ["<C-s>"] = {
             function()
                 require("harpoon.ui").nav_file(2)
             end,
             "nav file 2",
+        },
+        ["<C-f>"] = {
+            function()
+                require("harpoon.ui").nav_file(3)
+            end,
+            "nav file 3",
+        },
+        ["<C-g>"] = {
+            function()
+                require("harpoon.ui").nav_file(4)
+            end,
+            "nav file 4",
         },
         ["<C-n>"] = {
             function()

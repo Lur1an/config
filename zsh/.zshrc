@@ -17,8 +17,7 @@ alias tmux='TERM=screen-256color tmux'
 alias ezpush='aicommits --all && git push'
 
 function rust_dev() {
-    export RUST_LOG=info
-    cargo-watch -x check -x "test $1 -- --nocapture"
+    RUST_LOG=info cargo-watch -x check -x "test $1 -- --nocapture"
 }
 function boot_windows() {
     systemctl reboot --boot-loader-entry=auto-windows
@@ -27,10 +26,17 @@ function boot_windows() {
 alias rust-dev='rust_dev'
 alias boot-windows='boot_windows'
 
-
 # bun completions
 [ -s "/home/lurian/.bun/_bun" ] && source "/home/lurian/.bun/_bun"
 
 # bun
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
+
+# pnpm
+export PNPM_HOME="/home/lurian/.local/share/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end
