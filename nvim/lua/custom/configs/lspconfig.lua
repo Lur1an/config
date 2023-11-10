@@ -38,7 +38,6 @@ local servers = {
     "tsserver",
     "pyright",
     "nil",
-    -- "vacuum",
     "marksman",
 }
 
