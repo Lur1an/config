@@ -37,6 +37,7 @@ local servers = {
     "cssls",
     "tsserver",
     "pyright",
+    "nil",
     -- "vacuum",
     "marksman",
 }
